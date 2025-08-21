@@ -16,6 +16,10 @@ const Task = mongoose.model('Task', new mongoose.Schema({
     completed: Boolean
 }));
 
+
+app.get('', async (req, res) => {
+    res.json("yes");
+});
 // Routes
 app.get('/tasks', async (req, res) => {
     const tasks = await Task.find();
